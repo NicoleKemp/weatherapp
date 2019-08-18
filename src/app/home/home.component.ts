@@ -10,8 +10,10 @@ export class HomeComponent implements OnInit {
   constructor(private apiService: ApiServiceService) { }
 
   ngOnInit() {
-    return this.apiService.getForecast48Hour().subscribe((x => { console.log((x))}))
-
+    return this.apiService.getForecast48Hour()
+      .subscribe(x => {
+        console.log(x);
+      });
   }
 
 }

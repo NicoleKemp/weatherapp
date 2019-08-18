@@ -18,9 +18,16 @@ export class ApiServiceService {
     });
   }
 
+  // getForecast48Hour(): Observable<any> {
+  //   const httpOptions = {
+  //     headers: new HttpHeaders({ 'X-AjaxPro-Method': 'GetForeCast48Hour' })
+  //   };
+  //   return this.http.post('http://weather.news24.com/ajaxpro/Weather.Code.Ajax,Weather.ashx', { "cityId": "77107" }, httpOptions)
+  // }; ///weatherApi/GetForeCast48Hour
   getForecast48Hour(): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({ 'X-AjaxPro-Method': 'GetForeCast48Hour' })
     };
-    return this.http.post('http://weather.news24.com/ajaxpro/Weather.Code.Ajax,Weather.ashx/GetTideForecast', { "cityId": "77107" }, httpOptions)}
+    return this.http.post('/weatherApi', { "cityId": "77107" }, httpOptions)
+  }; ///weatherApi/GetForeCast48Hour
 }

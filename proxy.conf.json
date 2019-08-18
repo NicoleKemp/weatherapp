@@ -1,10 +1,11 @@
 {
-  "/posts": {
+  "/weatherApi": {
     "target": "http://weather.news24.com/ajaxpro/Weather.Code.Ajax,Weather.ashx",
-    "secure": true,
+    "secure": false,
     "pathRewrite": {
-      "^/posts": ""
+      "^/weatherApi": ""
     },
-    "changeOrigin": true
+    "changeOrigin": true,
+    "logLevel": "debug"
   }
 }
